@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #111827;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    color: #38bdf8;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Chat */
+.main {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+#chat-box {
+    height: 75vh;
+    overflow-y: auto;
+}
+
+.user-msg {
+    background: #2563eb;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.bot-msg {
+    background: #1e293b;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.input-area {
+    display: flex;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 10px;
+    background: #38bdf8;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Auth Pages */
+.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-box {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.auth-box input {
+    margin: 10px 0;
+}
