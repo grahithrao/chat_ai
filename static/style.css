@@ -1,92 +1,128 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
-}
+/* ===== AUTH PAGES NEXT LEVEL ===== */
 
-/* Sidebar */
-.sidebar {
-    width: 220px;
-    height: 100vh;
-    background: #111827;
-    padding: 20px;
-    position: fixed;
-}
-
-.sidebar h2 {
-    color: #38bdf8;
-}
-
-.sidebar a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Main Chat */
-.main {
-    margin-left: 240px;
-    padding: 20px;
-}
-
-#chat-box {
-    height: 75vh;
-    overflow-y: auto;
-}
-
-.user-msg {
-    background: #2563eb;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-    text-align: right;
-}
-
-.bot-msg {
-    background: #1e293b;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-}
-
-.input-area {
-    display: flex;
-}
-
-input {
-    flex: 1;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-button {
-    padding: 10px;
-    background: #38bdf8;
-    border: none;
-    color: black;
-    border-radius: 5px;
-    margin-left: 5px;
-    cursor: pointer;
-}
-
-/* Auth Pages */
 .auth-body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    color: white;
 }
 
+/* Glass Card */
 .auth-box {
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
+    width: 380px;
+    padding: 45px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    position: relative;
 }
 
-.auth-box input {
-    margin: 10px 0;
+/* Fade Animation */
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+/* Floating Inputs */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    font-size: 14px;
+}
+
+.input-group label {
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    font-size: 14px;
+    color: #ccc;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Floating effect */
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -8px;
+    left: 10px;
+    font-size: 11px;
+    background: #203a43;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+/* Button */
+.primary-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.6);
+}
+
+/* Error Message */
+.error-message {
+    background: rgba(255, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+/* Switch link */
+.switch-text {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.switch-text a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
 }
